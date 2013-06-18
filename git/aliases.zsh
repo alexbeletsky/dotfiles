@@ -9,6 +9,7 @@ fi
 # The rest of my fun git aliases
 alias gl='git pull --prune'
 alias gpr='git pull --rebase'
+alias grh='git reset --hard HEAD'
 alias gaa="git add -A"
 alias glog="git log --all --graph --pretty=format:'%C(bold blue)<%an>%Creset %Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci)%Creset' --abbrev-commit"
 alias gp='git push origin HEAD'

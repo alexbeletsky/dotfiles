@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# Runs interactive rebase for fixing last commits
+#
+# https://github.com/alexanderbeletsky/dotfiles
+
+set -e
+
+COMMITS="$@"
+HEAD="HEAD~$COMMITS"
+
+git rebase -i $HEAD
