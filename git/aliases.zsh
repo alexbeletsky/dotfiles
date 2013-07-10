@@ -14,6 +14,7 @@ alias gaa="git add -A"
 alias glog="git log --all --graph --pretty=format:'%C(bold blue)<%an>%Creset %Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci)%Creset' --abbrev-commit"
 alias gp='git push origin HEAD'
 alias gd='git diff --color'
+alias gdsubl='git diff | subl'
 alias gc='git commit'
 alias gca='git commit -a'
 alias gcam='git commit -am'
