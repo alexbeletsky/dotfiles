@@ -23,6 +23,7 @@ alias gco='git checkout'
 alias gpp='git push production master'
 alias gps='git push staging development:master'
 alias gb='git branch'
+alias gfc='git diff --name-only | uniq | xargs subl'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 alias grm="git status | grep deleted | awk '{\$1=\$2=\"\"; print \$0}' | \
            sed 's/^[ \t]*//' | sed 's/ /\\\\ /g' | xargs git rm"
