@@ -5,12 +5,13 @@ alias npmw='npm run-script watch'
 alias npmt='npm test'
 alias npmtw='npm run-script test-watch'
 alias npms='npm start'
+alias npmrbl='npm run d:build && npm run d:login'
 
 alias mongodfts='mongod --setParameter textSearchEnabled=true'
 alias mongodd='mongod --config /usr/local/etc/mongod.conf'
 
 alias docker-kill-all='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
-alias docker-kill-all-images='docker rmi $(docker images -a -q)'
+alias docker-kill-all-images='docker rmi --force $(docker images -a -q)'
 
 # ls, the common ones I use a lot shortened for rapid fire usage
 alias l='ls -lFh'     #size,show type,human readable
