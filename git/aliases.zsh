@@ -25,6 +25,7 @@ alias gps='git push staging development:master'
 alias gpt='git push --tags'
 alias gmd='git merge develop'
 alias gmm='git merge master'
+alias grm='git rebase master'
 alias gb='git branch'
 alias gfc='git diff --name-only | uniq | xargs subl'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.

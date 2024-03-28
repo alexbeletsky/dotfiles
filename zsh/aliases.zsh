@@ -7,6 +7,12 @@ alias npmtw='npm run-script test-watch'
 alias npms='npm start'
 alias npmrbl='npm run d:build && npm run d:login'
 
+alias y='yarn'
+alias yb='yarn && yarn build'
+alias ys='yarn && yarn start'
+alias yt='yarn test'
+alias yst='yarn storybook'
+
 alias mongodfts='mongod --setParameter textSearchEnabled=true'
 alias mongodd='mongod --config /usr/local/etc/mongod.conf'
 
