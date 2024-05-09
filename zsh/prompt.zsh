@@ -56,6 +56,15 @@ rb_prompt(){
   fi
 }
 
+nvm_prompt(){
+  if (( $+commands[node] ))
+  then
+    echo "%{$fg_bold[green]%}(node)$(node --version | awk '{print $1}')%{$reset_color%}"
+  else
+    echo "%{$fg_bold[red]%}(no nvm)%{$reset_color%}"
+  fi
+}
+
 # This keeps the number of todos always available the right hand side of my
 # command line. I filter it to only count those tagged as "+next", so it's more
 # of a motivation to clear out the list.
@@ -79,7 +88,7 @@ directory_name(){
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
-export PROMPT=$'\n$(rb_prompt) in $(directory_name) $(git_dirty)$(need_push)\n› '
+export PROMPT=$'\n$(nvm_prompt) in $(directory_name) $(git_dirty)$(need_push)\n› '
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}$(todo)%{$reset_color%}"
 }
