@@ -64,3 +64,19 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Enhanced terminal development tools configuration
+# FZF configuration
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+
+# Enable fzf key bindings and fuzzy completion
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Source highlight for less
+export LESSOPEN="| $(brew --prefix)/bin/src-hilite-lesspipe.sh %s"
+export LESS=' -R '
+

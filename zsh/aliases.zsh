@@ -30,3 +30,29 @@ alias ldot='ls -ld .*'
 alias lS='ls -1FSsh'
 alias lart='ls -1Fcart'
 alias lrt='ls -1Fcrt'
+# Enhanced terminal development tools aliases
+# Better file operations with eza
+alias ls='eza --color=always --group-directories-first'
+alias ll='eza -la --color=always --group-directories-first'
+alias lt='eza -aT --color=always --group-directories-first'
+
+# Better cat using bat
+alias cat='bat'
+alias less='bat --paging=always'
+
+# Git shortcuts
+alias gs='git status'
+alias gd='git diff'
+alias gl='git log --oneline --graph --decorate'
+alias gco='git checkout'
+alias gb='git branch'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+alias gpl='git pull'
+
+# File operations
+alias ff='find . -name'
+alias rg='rg --color=always'
+alias fd='fd --color=always'
+

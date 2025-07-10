@@ -26,7 +26,7 @@ echo "🔧 Installing development tools..."
 # Core tools
 tools=(
     "bat"           # Better cat with syntax highlighting
-    "exa"           # Modern ls replacement
+"eza"           # Modern ls replacement
     "tree"          # Directory tree viewer
     "git-delta"     # Better git diffs
     "fzf"           # Fuzzy finder
@@ -77,10 +77,10 @@ fi
 cat >> ~/.dotfiles/zsh/aliases.zsh << 'EOF'
 
 # Enhanced terminal development tools aliases
-# Better file operations with exa
-alias ls='exa --color=always --group-directories-first'
-alias ll='exa -la --color=always --group-directories-first'
-alias lt='exa -aT --color=always --group-directories-first'
+# Better file operations with eza
+alias ls='eza --color=always --group-directories-first'
+alias ll='eza -la --color=always --group-directories-first'
+alias lt='eza -aT --color=always --group-directories-first'
 
 # Better cat using bat
 alias cat='bat'
