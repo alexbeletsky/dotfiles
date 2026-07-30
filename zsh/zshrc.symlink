@@ -6,7 +6,13 @@ elif [ -x /usr/local/bin/brew ]; then
 fi
 
 # shortcut to this dotfiles path is $ZSH
-export ZSH=$HOME/.dotfiles
+export ZSH="$HOME/.dotfiles"
+
+# If the repo isn't at ~/.dotfiles (e.g. a VM clones it elsewhere), locate it
+# from wherever ~/.zshrc is symlinked. :A resolves the symlink to the real file.
+if [[ ! -e $ZSH/zsh/zshrc.symlink ]]; then
+  ZSH="${${(%):-%x}:A:h:h}"
+fi
 
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/Development/Projects
@@ -19,8 +25,10 @@ then
 fi
 
 # all of our zsh files
+# (N) qualifier = an empty match expands to nothing instead of aborting the
+# shell with "no matches found" (zsh's default NOMATCH behavior).
 typeset -U config_files
-config_files=($ZSH/**/*.zsh)
+config_files=($ZSH/**/*.zsh(N))
 
 # load the path files
 for file in ${(M)config_files:#*/path.zsh}
